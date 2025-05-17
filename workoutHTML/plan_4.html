@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>Intermediate HIIT Weight Loss Plan</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> HIIT Full Body
+                    <ul>
+                        <li>Warm-Up: Dynamic stretches, 5-min jog</li>
+                        <li>Workout (3 rounds):
+                            <ul>
+                                <li>30s Jump Squats</li>
+                                <li>30s Burpees</li>
+                                <li>30s Push-ups</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Static stretches</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=UBMk30rjy0o" target="_blank">Watch HIIT Full Body Video</a>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Core & Light Cardio
+                    <ul>
+                        <li>Warm-Up: 5 min fast walk</li>
+                        <li>Workout (3 rounds):
+                            <ul>
+                                <li>20 Sit-ups</li>
+                                <li>15 Leg Raises</li>
+                                <li>30s Plank</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Deep breathing</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=AnYl6Nk9GOA" target="_blank">Watch Core & Cardio Video</a>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Group Fitness (Dance HIIT or Boxing)
+                    <ul>
+                        <li>Warm-Up: 5 min light cardio</li>
+                        <li>Workout: Class-based session (30–45 min)</li>
+                        <li>Cool-Down: Light yoga</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=4pKly2JojMw" target="_blank">Watch Group Fitness Video</a>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> HIIT Lower Body
+                    <ul>
+                        <li>Warm-Up: Jog + mobility drills</li>
+                        <li>Workout (3 rounds):
+                            <ul>
+                                <li>Lunges</li>
+                                <li>Jump Squats</li>
+                                <li>Glute Bridges</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Hamstring and quad stretches</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=_Zem0_qsDg0" target="_blank">Watch Lower Body HIIT Video</a>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Mobility & Recovery
+                    <ul>
+                        <li>Routine: Foam rolling + stretching (30 mins)</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=2_L3sM1U8b4" target="_blank">Watch Recovery Routine Video</a>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Outdoor Fun HIIT
+                    <ul>
+                        <li>Warm-Up: Skipping or jumping jacks</li>
+                        <li>Workout (3 rounds):
+                            <ul>
+                                <li>1 min Sprints</li>
+                                <li>1 min Squats</li>
+                                <li>1 min Jumping Jacks</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Walking and breathing drills</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=ml6cT4AZdqI" target="_blank">Watch Outdoor HIIT Video</a>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Rest or Gentle Yoga
+                    <ul>
+                        <li>Routine: 20 min yoga flow or rest day</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=Qq8Uc5BFogE" target="_blank">Watch Gentle Yoga Video</a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'workoutPDF/pdf4.pdf'; // Replace with the actual path to your PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

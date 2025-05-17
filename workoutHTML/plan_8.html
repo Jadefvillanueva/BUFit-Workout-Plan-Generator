@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>Intermediate Yoga/Pilates Flexibility Plan</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> Core-Focused Pilates
+                    <ul>
+                        <li>Warm-Up (5-10 minutes): Gentle seated twists, cat-cow stretches, diaphragmatic breathing</li>
+                        <li>Workout (3 rounds):
+                            <ul>
+                                <li>Hundred – 30 seconds</li>
+                                <li>Leg Circles – 10 reps each leg</li>
+                                <li>Single Leg Stretch – 12 reps</li>
+                                <li>Double Leg Stretch – 10 reps</li>
+                                <li>Plank to Downward Dog – 8 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Supine spinal twist, Child’s Pose</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Flow Yoga (Vinyasa Style)
+                    <ul>
+                        <li>Warm-Up: Sun Salutation A – 3 rounds</li>
+                        <li>Workout (Flow Sequence):
+                            <ul>
+                                <li>Warrior I → Warrior II → Reverse Warrior</li>
+                                <li>Chair Pose → Forward Fold → Plank</li>
+                                <li>Cobra → Downward Dog → Low Lunge (both sides)</li>
+                                <li>Repeat Flow 3x</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Pigeon Pose (each side), Seated Forward Fold</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Rest or Gentle Stretching
+                    <ul>
+                        <li>10–15 minutes of breath-focused stretching</li>
+                        <li>Optional: Try Yin Yoga or Somatic Movement</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> Pilates for Flexibility and Control
+                    <ul>
+                        <li>Warm-Up: Shoulder rolls, spine articulation</li>
+                        <li>Workout (3 sets):
+                            <ul>
+                                <li>Roll-Up – 10 reps</li>
+                                <li>Saw – 10 reps</li>
+                                <li>Swimming – 30 seconds</li>
+                                <li>Side Kicks – 12 each side</li>
+                                <li>Pelvic Curl – 12 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Hamstring stretches with band, Figure Four Stretch</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Yoga Balance and Stability
+                    <ul>
+                        <li>Warm-Up: Hip openers, standing stretches</li>
+                        <li>Workout (3 rounds):
+                            <ul>
+                                <li>Tree Pose – 30 sec each side</li>
+                                <li>Half Moon – 20 sec each side</li>
+                                <li>Eagle Pose – 20 sec each side</li>
+                                <li>Chair to Airplane Pose – 8 transitions</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Happy Baby Pose, Supine Twist, Savasana</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Explore a New Style
+                    <ul>
+                        <li>Try a different yoga or Pilates class (online or in-person)</li>
+                        <li>Suggestions: Kundalini, Barre, Power Yoga, Tai Chi-Pilates fusion</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Rest and Reflection
+                    <ul>
+                        <li>Gentle stretching or restorative poses (15 minutes)</li>
+                        <li>Journal reflections on the week’s movement experiences</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'workoutPDF/pdf8.pdf'; // Replace with the actual path to your PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

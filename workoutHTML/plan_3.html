@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>Intermediate Muscle-Gain Plan at the Gym</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> Upper Body Push
+                    <ul>
+                        <li>Warm-Up (5–10 minutes): Treadmill walk or light elliptical, shoulder mobility drills</li>
+                        <li>Workout (4 sets each):
+                            <ul>
+                                <li>Barbell Bench Press – 8–10 reps</li>
+                                <li>Incline Dumbbell Press – 10 reps</li>
+                                <li>Dumbbell Lateral Raises – 12 reps</li>
+                                <li>Cable Tricep Pushdowns – 12–15 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch chest, shoulders, triceps</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Lower Body Strength
+                    <ul>
+                        <li>Warm-Up: Dynamic leg swings, bodyweight squats, walking lunges</li>
+                        <li>Workout (4 sets each):
+                            <ul>
+                                <li>Barbell Back Squat – 6–8 reps</li>
+                                <li>Romanian Deadlift – 10 reps</li>
+                                <li>Leg Press – 12 reps</li>
+                                <li>Calf Raises – 15–20 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Foam roll quads, hamstrings, and calves</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Active Recovery or Light Cardio
+                    <ul>
+                        <li>Incline treadmill walk or light cycling (20–30 minutes)</li>
+                        <li>Full-body stretching routine or yoga session</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> Upper Body Pull
+                    <ul>
+                        <li>Warm-Up: Arm swings, band pull-aparts, 5 minutes cardio</li>
+                        <li>Workout (4 sets each):
+                            <ul>
+                                <li>Pull-Ups or Lat Pulldown – 8–10 reps</li>
+                                <li>Seated Row Machine – 10 reps</li>
+                                <li>Dumbbell Face Pulls – 12 reps</li>
+                                <li>Barbell or Dumbbell Bicep Curls – 12 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch lats, biceps, upper back</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Glutes and Hamstrings Focus
+                    <ul>
+                        <li>Warm-Up: Glute activation, light cardio, mobility work</li>
+                        <li>Workout (4 sets each):
+                            <ul>
+                                <li>Deadlifts – 6–8 reps</li>
+                                <li>Bulgarian Split Squats – 10 reps per leg</li>
+                                <li>Hip Thrusts (barbell or machine) – 12 reps</li>
+                                <li>Hamstring Curls (machine) – 12–15 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch hips, hamstrings, and glutes</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Optional Metcon or HIIT
+                    <ul>
+                        <li>15–20 min circuit: rowing, dumbbell thrusters, kettlebell swings, jump rope</li>
+                        <li>Keep rest minimal for conditioning</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Rest or Recovery
+                    <ul>
+                        <li>Light stretching, massage, or easy outdoor walk (15–30 minutes)</li>
+                        <li><strong>Tips:</strong>
+                            <ul>
+                                <li>Prioritize protein (1.2–2g/kg bodyweight) and post-workout meals</li>
+                                <li>Stay consistent with training and track progressive overload</li>
+                                <li>Get 7–9 hours of sleep for optimal muscle recovery</li>
+                                <li>Hydrate well and time carbs around workouts for energy</li>
+                                <li>Focus on form and full range of motion in all lifts</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'workoutPDF/pdf3.pdf'; // Replace with the actual path to your PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

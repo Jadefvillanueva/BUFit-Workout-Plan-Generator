@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>Beginner 30-min Endurance Plan for Under-18s</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> Endurance Run
+                    <ul>
+                        <li>Warm-Up (5-10 minutes): Dynamic stretches (leg swings, arm circles), light jogging or brisk walking</li>
+                        <li>Workout (30 minutes): Run at a comfortable pace or alternate 2 min run / 1 min walk</li>
+                        <li>Cool-Down (5 minutes): Walk slowly to lower heart rate, static stretches (quadriceps, hamstrings)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Active Recovery & Nutrition
+                    <ul>
+                        <li>Active Recovery (20-30 minutes): Yoga, light cycling, or swimming</li>
+                        <li>Nutrition Knowledge (10 minutes):
+                            <ul>
+                                <li>Importance of balanced meals: carbohydrates, proteins, fats</li>
+                                <li>Hydration: aim for 6–8 cups of water daily</li>
+                                <li>Healthy snacks: fruits, nuts, yogurt</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Interval Training
+                    <ul>
+                        <li>Warm-Up (5-10 minutes): Dynamic stretches and light jogging</li>
+                        <li>Workout (30 minutes): Alternate 1 min fast run / 2 min easy jog</li>
+                        <li>Cool-Down (5 minutes): Light walking and full-body stretches</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> Cross-Training
+                    <ul>
+                        <li>Warm-Up (5-10 minutes): Jump rope or fast-paced walk</li>
+                        <li>Workout (30 minutes): Mix of cycling, swimming, or rowing at steady pace</li>
+                        <li>Cool-Down (5 minutes): Gentle stretches and deep breathing</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Fartlek Play
+                    <ul>
+                        <li>Warm-Up (5-10 minutes): Light jog and mobility work</li>
+                        <li>Workout (30 minutes): Fartlek – playful speed changes (15 min faster blocks / 1–2 min easy)</li>
+                        <li>Cool-Down (5 minutes): Slow walk and stretching</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Fun Activity
+                    <ul>
+                        <li>Engage in sports or games: soccer, basketball, hiking (30–60 minutes)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Rest or Gentle Recovery
+                    <ul>
+                        <li>Light yoga, stretching, or leisurely walk (15–20 minutes)</li>
+                        <li><strong>Tips:</strong>
+                            <ul>
+                                <li>Maintain a colorful plate: include vegetables, lean proteins, and whole grains</li>
+                                <li>Prioritize sleep: aim for 8–10 hours per night</li>
+                                <li>Listen to your body: rest if feeling overly fatigued</li>
+                                <li>Track progress: note durations and how you feel each session</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'workoutPDF/pdf9.pdf'; // Replace with the actual path to your PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

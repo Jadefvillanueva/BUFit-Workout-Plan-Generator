@@ -1,0 +1,125 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>General Adventure Plan</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> Indoor Circuit Training
+                    <ul>
+                        <li>Warm-Up: 5 min jump rope</li>
+                        <li>Workout (3 rounds):
+                            <ul>
+                                <li>10 Push-ups</li>
+                                <li>15 Squats</li>
+                                <li>20 Sit-ups</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch + deep breathing</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=UBMk30rjy0o" target="_blank">Watch Circuit Training Video</a>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Indoor Cycling Session
+                    <ul>
+                        <li>Warm-Up: Easy pace (5 min)</li>
+                        <li>Workout: Intervals – 1 min fast / 2 min easy (x6)</li>
+                        <li>Cool-Down: Light pedaling + stretches</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=AnYl6Nk9GOA" target="_blank">Watch Cycling Session Video</a>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Adventure Activity: Rock Climbing or Rowing
+                    <ul>
+                        <li>Warm-Up: Arm circles + mobility</li>
+                        <li>Workout: 30–45 min climb or row machine</li>
+                        <li>Cool-Down: Foam rolling</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=4pKly2JojMw" target="_blank">Watch Climb or Row Video</a>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> Strength Training
+                    <ul>
+                        <li>Warm-Up: Band stretches + arm swings</li>
+                        <li>Workout (3 sets):
+                            <ul>
+                                <li>Dumbbell Presses</li>
+                                <li>Deadlifts</li>
+                                <li>Lunges</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch chest and legs</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=_Zem0_qsDg0" target="_blank">Watch Strength Training Video</a>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Yoga + Recovery
+                    <ul>
+                        <li>Routine: 30 min guided yoga session indoors</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=2_L3sM1U8b4" target="_blank">Watch Yoga & Recovery Video</a>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Fun Indoor Challenge
+                    <ul>
+                        <li>Warm-Up: Dance or jump rope (5 min)</li>
+                        <li>Workout: AMRAP 20 min –
+                            <ul>
+                                <li>10 Burpees</li>
+                                <li>15 Jump Squats</li>
+                                <li>20 Mountain Climbers</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Light yoga flow</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=ml6cT4AZdqI" target="_blank">Watch Indoor Challenge Video</a>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Rest or Light Stretching
+                    <ul>
+                        <li>Routine: 15–20 min light mobility or meditation</li>
+                        <li><strong>Tips:</strong>
+                            <ul>
+                                <li>Log your progress at the end of each month to track improvements</li>
+                                <li>Mix different indoor activities to keep workouts adventurous and fun</li>
+                                <li>Try indoor climbing, cycling, or circuit training for variety</li>
+                                <li>Maintain consistency by scheduling workouts like appointments</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=Qq8Uc5BFogE" target="_blank">Watch Recovery Video</a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'workoutPDF/pdf10.pdf'; // Replace with the actual path to your PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

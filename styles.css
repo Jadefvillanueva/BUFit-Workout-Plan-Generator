@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+:root {
+  --color-text: #f5e8e8;
+  --color-background: linear-gradient(to right bottom, #b7b7b8, #A8A9AD);
+  --color-container: linear-gradient(to right bottom, #2c2d30, #6e6e71);
+  --color-list: linear-gradient(145deg, #9fa4a9, #686d71);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  font-size: 1.6rem;
+  place-items: center;
+  font-family: 'Orbitron', sans-serif;
+  
+  /* Add semi-opaque background image */
+  background: linear-gradient(
+    rgba(140, 144, 170, 0.925), /* 50% opaque black overlay */
+    rgba(100, 122, 131, 0.5)
+  ), url(images/Logo\ for\ BU\ Fit.webp) center/cover no-repeat;
+  
+  /* Fallback metallic gradient in case the image doesn't load */
+  background-blend-mode: overlay;
+  background-color: #252629;
+}
+
+/* Metallic and 3D effect on h1 */
+h1 {
+  text-align: center;
+  color: mintcream;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  position: sticky;
+  background: linear-gradient(145deg, #3a3a3a, #f1edea);
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  /* Metallic 3D effect with shadows */
+  text-shadow:
+    2px 2px 3px #000000, /* Base shadow for depth */
+    4px 4px 8px rgba(0, 0, 0, 0.5), /* Outer dark shadow */
+    -2px -2px 5px rgba(255, 255, 255, 0.2); /* Light top glow for metallic shine */
+  
+  font-size: 4rem; /* Larger font for a stronger 3D impact */
+  letter-spacing: 0.1rem;
+}
+
+#question {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: whitesmoke;
+  text-shadow: 
+        1px 1px 0 black,  
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black;
+}
+
+/* Layout for the container */
+.container {
+  width: 70vw; /* Increased width */
+  padding: 5rem; /* Add more padding */
+  position: relative;
+  border-radius: 3rem;
+  background: var(--color-container);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), inset 0 -3px 8px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  border: 1px solid #9a9b9e;
+}
+
+.container::before {
+  content: "";
+  top: -10rem;
+  left: -10rem;
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 70%);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.container::after {
+  content: "";
+  bottom: 0rem;
+  right: -10rem;
+  width: 40rem;
+  height: 40rem;
+  margin-bottom: -25rem;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 185, 142, 0.4), transparent 70%);
+}
+
+/* Button styling */
+button {
+  --glow-color: rgb(231, 231, 233);
+  --glow-spread-color: rgba(127, 128, 129, 0.781);
+  --enhanced-glow-color: rgb(147, 147, 149);
+  --btn-color: rgb(23, 23, 23);
+  border: .15em solid var(--glow-color);
+  padding: 0.5em 1.5em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 
+    0 0 .5em var(--glow-color),
+    0 0 0.25em var(--enhanced-glow-color); /* Glow around text */
+  position: relative;
+  transition: all 0.3s;
+}
+
+button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 .5em .25em var(--glow-color);
+}
+
+
+/* Adjusting the options section */
+#options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow buttons to wrap onto a new row if needed */
+  gap: 20px; /* Space between buttons */
+}
+
+p {
+  
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: whitesmoke;
+  text-shadow: 
+        1px 1px 0 black,  
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black;
+}
+
+ul {
+  list-style-type: none; /* Removes bullets */
+  padding: 0; /* Optional: Removes padding on the left */
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: left; /* Ensures text is left-aligned */
+}
+
+li {
+  margin-bottom: 1.5em;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #000;
+  background: #fff;
+  border: 4px solid #000;
+  padding: 0.75em 1em;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 8px 8px 0 0 #000;
+}
+
+li::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px dashed #000;
+  pointer-events: none;
+}
+
+li::marker {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+li:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 0 #000;
+}
+
+
+
+/* From Uiverse.io by 0xnihilism */
+.brutalist-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 169px;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border: 3px solid #fff;
+  outline: 3px solid #000;
+  box-shadow: 6px 6px 0 #00a4ef;
+  transition: all 0.1s ease-out;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.brutalist-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  z-index: 1;
+  transition: none;
+  opacity: 0;
+}
+
+.brutalist-button:hover::before {
+  opacity: 1;
+  animation: slide 2s infinite;
+}
+
+.brutalist-button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0 #000;
+  background-color: #000;
+  color: #fff;
+}
+
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.brutalist-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0 #00a4ef;
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+.ms-logo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.brutalist-button:hover .ms-logo {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.brutalist-button:active .ms-logo {
+  transform: rotate(10deg) scale(0.9);
+}
+
+.ms-logo-square {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.ms-logo-square:nth-child(1) {
+  background-color: #1d1b1b;
+}
+.ms-logo-square:nth-child(2) {
+  background-color: #929390;
+}
+.ms-logo-square:nth-child(3) {
+  background-color: #232424;
+}
+.ms-logo-square:nth-child(4) {
+  background-color: #8f8e8b;
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  transition: transform 0.2s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.brutalist-button:hover .button-text {
+  transform: skew(-5deg);
+}
+
+.brutalist-button:active .button-text {
+  transform: skew(5deg);
+}
+
+.button-text span:first-child {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.button-text span:last-child {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+

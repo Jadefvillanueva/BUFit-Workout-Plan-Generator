@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>Very Light Weight-Loss Plan for Older Beginners with Injuries</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> Gentle Full-Body Mobility
+                    <ul>
+                        <li>Warm-Up (5-10 minutes): Seated or standing arm circles, slow marching in place</li>
+                        <li>Workout (2 sets):
+                            <ul>
+                                <li>Chair Squats – 8 reps</li>
+                                <li>Wall Push-ups – 8–10 reps</li>
+                                <li>Seated Rows with Resistance Band – 10 reps</li>
+                                <li>Standing Leg Raises – 10 per leg</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Gentle stretches (neck, shoulders, hamstrings)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Light Cardio and Core
+                    <ul>
+                        <li>Warm-Up: Gentle walk or pedal on stationary bike (5 minutes)</li>
+                        <li>Workout:
+                            <ul>
+                                <li>Cardio: 15–20 min slow walk or pool walking</li>
+                                <li>Core (2 rounds):
+                                    <ul>
+                                        <li>Seated Torso Twists – 10 reps per side</li>
+                                        <li>Marching in Place with Core Focus – 20 seconds</li>
+                                        <li>Seated Side Bends – 10 per side</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Deep breathing and light stretching</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Recovery Movement
+                    <ul>
+                        <li>Gentle chair yoga or guided stretching video (20 minutes)</li>
+                        <li>Optional: Easy walk around the block</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> Upper Body Mobility & Light Cardio
+                    <ul>
+                        <li>Warm-Up: Arm swings and shoulder rolls</li>
+                        <li>Workout:
+                            <ul>
+                                <li>Strength (2 sets):
+                                    <ul>
+                                        <li>Wall Push-ups – 10 reps</li>
+                                        <li>Seated Overhead Press (light weights or bands) – 8 reps</li>
+                                        <li>Elbow Extensions (with band) – 10 reps</li>
+                                    </ul>
+                                </li>
+                                <li>Cardio: 15 min of alternating slow and brisk walking (1 min each)</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Shoulder and arm stretches</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Lower Body Strength
+                    <ul>
+                        <li>Warm-Up: Gentle leg swings and ankle circles</li>
+                        <li>Workout (2 sets):
+                            <ul>
+                                <li>Sit-to-Stand from Chair – 8 reps</li>
+                                <li>Standing Calf Raises – 12 reps</li>
+                                <li>Glute Squeeze (seated or lying) – 10 reps</li>
+                                <li>Heel Slides (on floor or bed) – 10 reps per leg</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch calves, thighs, and hips</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Enjoyable Movement
+                    <ul>
+                        <li>Choose a fun light activity: gardening, slow dance, scenic walk, or aquatic therapy (20–30 minutes)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Rest or Very Gentle Recovery
+                    <ul>
+                        <li>Deep breathing, light stretching, or meditation (15 minutes)</li>
+                        <li>Optional: Gentle walk for circulation</li>
+                        <li><strong>Tips:</strong>
+                            <ul>
+                                <li>Morning routines help build consistency</li>
+                                <li>Use chairs, walls, or rails for balance and support</li>
+                                <li>Focus on comfort over intensity; avoid pain or strain</li>
+                                <li>Stay hydrated and eat nourishing, easy-to-digest meals</li>
+                                <li>Celebrate small wins and listen to your body</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'workoutPDF/pdf1.pdf'; // Replace with the actual path to your PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

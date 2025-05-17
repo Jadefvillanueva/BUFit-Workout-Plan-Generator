@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+        :root {
+            --color-text: #f5e8e8;
+            --color-background: linear-gradient(to right bottom, #b7b7b8, #A8A9AD);
+            --color-container: linear-gradient(to right bottom, #2c2d30, #6e6e71);
+            --color-list: linear-gradient(145deg, #9fa4a9, #686d71);
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ensures the body takes the full height of the viewport */
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(
+                rgba(140, 144, 170, 0.925),
+                rgba(100, 122, 131, 0.5)
+            ), url(images/Logo\ for\ BU\ Fit.webp) center/cover no-repeat;
+            background-blend-mode: overlay;
+            background-color: #252629;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+        
+        body {
+            display: block; /* Change from grid to block layout */
+        }
+
+        h2 {
+            color: cyan;
+            bottom: 2rem;
+            left: 50%;
+        }
+
+        h1 {
+            text-align: center;
+            color: mintcream;
+            margin-bottom: 2rem;
+            padding-top: 2rem;
+            position: sticky;
+            background: linear-gradient(145deg, #3a3a3a, #f1edea);
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-shadow:
+                2px 2px 3px #000000, /* Base shadow for depth */
+                4px 4px 8px rgba(0, 0, 0, 0.5), /* Outer dark shadow */
+                -2px -2px 5px rgba(255, 255, 255, 0.2); /* Light top glow for metallic shine */
+            font-size: 5rem; /* Larger font for a stronger 3D impact */
+            letter-spacing: 0.1rem;
+        }
+
+        main.container {
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 1200px;
+            padding: 2rem;
+            background: var(--color-container);
+            border-radius: 3rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), inset 0 -3px 8px rgba(255, 255, 255, 0.1);
+            border: 1px solid #9a9b9e;
+        }
+
+        .container::before {
+            content: "";
+            top: -10rem;
+            left: -10rem;
+            width: 40rem;
+            height: 40rem;
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 70%);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .container::after {
+            content: "";
+            bottom: 0rem;
+            right: -10rem;
+            width: 40rem;
+            height: 40rem;
+            margin-bottom: -25rem;
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 185, 142, 0.4), transparent 70%);
+        }
+
+        .summary {
+            font-size: 1.8rem;
+            color: whitesmoke;
+            text-shadow: 
+                1px 1px 0 black,  
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black;
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .plan ul li {
+            font-size: 1.3rem;
+            font-family: 'Tahoma';
+            background: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color:black;
+            
+        }
+
+        button {
+            --glow-color: rgb(231, 231, 233);
+            --glow-spread-color: rgba(127, 128, 129, 0.781);
+            --enhanced-glow-color: rgb(147, 147, 149);
+            --btn-color: rgb(23, 23, 23);
+            border: .15em solid var(--glow-color);
+            padding: 0.5em 1.5em;
+            color: var(--glow-color);
+            font-size: 15px;
+            font-weight: bold;
+            background-color: var(--btn-color);
+            border-radius: 1em;
+            outline: none;
+            box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 1em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+            text-shadow: 
+                0 0 .5em var(--glow-color),
+                0 0 0.25em var(--enhanced-glow-color);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            color: var(--btn-color);
+            background-color: var(--glow-color);
+            box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 2em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+        }
+
+        button:active {
+            box-shadow: 0 0 0.6em .25em var(--glow-color),
+                0 0 2.5em 2em var(--glow-spread-color),
+                inset 0 0 .5em .25em var(--glow-color);
+        }
+
+
+        .video-link {
+            margin-top: 10px;
+        }

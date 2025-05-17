@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>Beginner Muscle-Gain Plan Using Dumbbells</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> Full-Body Dumbbell Strength
+                    <ul>
+                        <li>Warm-Up (5–10 minutes): Arm circles, hip circles, light jogging or step marching</li>
+                        <li>Workout (3 sets each):
+                            <ul>
+                                <li>Dumbbell Goblet Squats – 10 reps</li>
+                                <li>Dumbbell Chest Press (floor or bench) – 10 reps</li>
+                                <li>One-Arm Dumbbell Row – 10 reps per side</li>
+                                <li>Standing Dumbbell Curl – 10 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch quads, shoulders, and back</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Cardio & Core
+                    <ul>
+                        <li>Warm-Up (5 minutes): Light jog or dynamic stretches</li>
+                        <li>Workout:
+                            <ul>
+                                <li>Cardio: 20–30 min walk, bike, or low-impact step</li>
+                                <li>Core (3 rounds):
+                                    <ul>
+                                        <li>Dumbbell Russian Twists – 10 per side</li>
+                                        <li>Dead Bug (bodyweight) – 10 reps</li>
+                                        <li>Forearm Plank – 20–30 seconds</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Breathing exercises and light stretching</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Active Recovery
+                    <ul>
+                        <li>20–30 minutes of yoga or stretching</li>
+                        <li>Optional: Leisure walk or easy recreational activity</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> Upper Body Dumbbell Strength
+                    <ul>
+                        <li>Warm-Up: Arm swings, shoulder rolls, light cardio (5 mins)</li>
+                        <li>Workout (3 sets each):
+                            <ul>
+                                <li>Dumbbell Overhead Press – 10 reps</li>
+                                <li>Dumbbell Lateral Raise – 10 reps</li>
+                                <li>Dumbbell Tricep Kickbacks – 10 reps per arm</li>
+                                <li>Dumbbell Bicep Curls – 10 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch chest, arms, and shoulders</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Lower Body Dumbbell Strength
+                    <ul>
+                        <li>Warm-Up: Same as Monday</li>
+                        <li>Workout (3 sets each):
+                            <ul>
+                                <li>Dumbbell Lunges – 10 reps per leg</li>
+                                <li>Dumbbell Romanian Deadlifts – 10 reps</li>
+                                <li>Dumbbell Calf Raises – 15 reps</li>
+                                <li>Glute Bridges (bodyweight or with dumbbell) – 12 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch calves, hamstrings, and glutes</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Optional Fun Movement or Light Cardio
+                    <ul>
+                        <li>Choose an activity you enjoy: dance, walk, or sports (30–45 minutes)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Rest or Recovery
+                    <ul>
+                        <li>Light stretching, foam rolling, or deep breathing (15–20 minutes)</li>
+                        <li><strong>Tips:</strong>
+                            <ul>
+                                <li>Focus on learning proper form before increasing weight</li>
+                                <li>Eat protein-rich meals around workouts (e.g., eggs, chicken, beans)</li>
+                                <li>Stay hydrated and sleep well for better recovery</li>
+                                <li>Track your progress to stay motivated</li>
+                                <li>Don't skip rest days—they're key for muscle growth</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'workoutPDF/pdf2.pdf'; // Replace with the actual path to your PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

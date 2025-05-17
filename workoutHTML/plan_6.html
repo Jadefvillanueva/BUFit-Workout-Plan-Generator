@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>Elite Max Endurance Training Plan</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> Threshold Run
+                    <ul>
+                        <li>Warm-Up: Jog (10 min)</li>
+                        <li>Workout: 6 km at lactate threshold pace</li>
+                        <li>Cool-Down: Walking and static stretches</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=UBMk30rjy0o" target="_blank">Watch Threshold Run Video</a>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Strength & Mobility
+                    <ul>
+                        <li>Warm-Up: Mobility drills</li>
+                        <li>Workout:
+                            <ul>
+                                <li>Weighted Squats</li>
+                                <li>Deadlifts</li>
+                                <li>Chin-ups</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Foam rolling + yoga</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=AnYl6Nk9GOA" target="_blank">Watch Strength & Mobility Video</a>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Buddy HIIT Session
+                    <ul>
+                        <li>Warm-Up: Skipping + drills</li>
+                        <li>Workout: Circuit with friend –
+                            <ul>
+                                <li>Burpees</li>
+                                <li>Box Jumps</li>
+                                <li>Kettlebell Swings</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Partner stretching</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=4pKly2JojMw" target="_blank">Watch Buddy HIIT Video</a>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> Bike Intervals
+                    <ul>
+                        <li>Warm-Up: Easy cycling (10 min)</li>
+                        <li>Workout: 10x1 min high-intensity / 1 min rest</li>
+                        <li>Cool-Down: Easy spin and deep breaths</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=_Zem0_qsDg0" target="_blank">Watch Bike Intervals Video</a>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Swimming or Rowing
+                    <ul>
+                        <li>Warm-Up: Arm swings + light swim/row</li>
+                        <li>Workout: 45 min at endurance pace</li>
+                        <li>Cool-Down: Shoulder and leg stretches</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=2_L3sM1U8b4" target="_blank">Watch Swim/Row Video</a>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Group Long Run
+                    <ul>
+                        <li>Warm-Up: Light jog</li>
+                        <li>Workout: 15–20 km steady with running club</li>
+                        <li>Cool-Down: Full mobility flow</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=ml6cT4AZdqI" target="_blank">Watch Long Run Video</a>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Active Recovery
+                    <ul>
+                        <li>Routine: Sauna, foam rolling, yoga flow (20–30 min)</li>
+                        <li><strong>Tips:</strong>
+                            <ul>
+                                <li>Train with friends to stay accountable and push limits</li>
+                                <li>Monitor HR zones and recovery time after intense workouts</li>
+                                <li>Include cross-training (bike, swim, row) to avoid overuse injuries</li>
+                                <li>Prioritize sleep and nutrition for optimal performance</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=Qq8Uc5BFogE" target="_blank">Watch Recovery Video</a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'workoutPDF/pdf6.pdf'; // Replace with the actual path to your PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>General Balanced Workout Plan</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> Full-Body Strength
+                    <ul>
+                        <li>Warm-Up: Dynamic stretches, light cardio (jumping jacks, jogging).</li>
+                        <li>Workout: 3 sets each:
+                            <ul>
+                                <li>Squats – 12 reps</li>
+                                <li>Push-ups – 10-15 reps</li>
+                                <li>Dumbbell or bodyweight rows – 12 reps per arm</li>
+                                <li>Plank – hold for 30-60 seconds</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Static stretches (hamstrings, quads, shoulders).</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=UBMk30rjy0o" target="_blank">Watch Full-Body Strength Video</a>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Cardio and Core
+                    <ul>
+                        <li>Warm-Up: Light jog or fast-paced walk.</li>
+                        <li>Workout:
+                            <ul>
+                                <li>Cardio: Jogging, cycling, or swimming for 20–30 minutes.</li>
+                                <li>Core (3 rounds):
+                                    <ul>
+                                        <li>Russian twists – 20 reps (10 per side)</li>
+                                        <li>Bicycle crunches – 20 reps</li>
+                                        <li>Side plank – hold 20–30 seconds per side</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Deep breathing and light stretching.</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=AnYl6Nk9GOA" target="_blank">Watch Cardio and Core Video</a>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Active Recovery (Yoga or Light Stretching)
+                    <ul>
+                        <li>Yoga or stretching routine (20–30 minutes).</li>
+                        <li>Easy walk or casual sports activity.</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=4pKly2JojMw" target="_blank">Watch Yoga Flow Video</a>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> Upper Body & Cardio Intervals
+                    <ul>
+                        <li>Warm-Up: Light cardio and arm/shoulder mobility stretches.</li>
+                        <li>Workout:
+                            <ul>
+                                <li>Strength (3 sets each):
+                                    <ul>
+                                        <li>Push-ups – 10-15 reps</li>
+                                        <li>Dumbbell or bodyweight overhead press – 12 reps</li>
+                                        <li>Tricep dips – 12-15 reps</li>
+                                    </ul>
+                                </li>
+                                <li>Cardio Intervals (20 minutes): Alternate 1 minute of fast running/cycling with 2 minutes of walking.</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch chest, shoulders, and arms.</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=_Zem0_qsDg0" target="_blank">Watch Upper Body & Cardio Video</a>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Lower Body Strength
+                    <ul>
+                        <li>Warm-Up: Same as Monday.</li>
+                        <li>Workout (3 sets each):
+                            <ul>
+                                <li>Lunges – 12 reps per leg</li>
+                                <li>Deadlifts (with dumbbells or bodyweight) – 12 reps</li>
+                                <li>Calf raises – 15 reps</li>
+                                <li>Glute bridges – 12–15 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch hamstrings, quads, and glutes.</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=2_L3sM1U8b4" target="_blank">Watch Lower Body Strength Video</a>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Cardio & Fun Activity
+                    <ul>
+                        <li>Choose an activity like hiking, biking, or playing sports (30–60 minutes).</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=ml6cT4AZdqI" target="_blank">Watch Cardio Inspiration Video</a>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Rest or Gentle Recovery
+                    <ul>
+                        <li>Light yoga, foam rolling, or stretching (15–20 minutes).</li>
+                    </ul>
+                    <a href="https://www.youtube.com/watch?v=Qq8Uc5BFogE" target="_blank">Watch Recovery Routine Video</a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'general_balanced.pdf'; // Replace with the actual path to your PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUFit - Personalized Workout Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workout-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your BUFit Workout Plan!</h1>
+    </header>
+    <main class="container">
+        <p class="summary">Based on your answers, we've created a workout plan for your fitness goals and preferences. Stay consistent, and you'll see amazing results!</p>
+
+        <section class="plan">
+            <h2>Advanced Muscle-Gain Evening Plan</h2>
+            <ul>
+                <li>
+                    <strong>Monday:</strong> Upper Body Hypertrophy
+                    <ul>
+                        <li>Warm-Up: Arm circles, shoulder mobility (5 min), treadmill brisk walk or light jog (5 min)</li>
+                        <li>Workout (4 sets each):
+                            <ul>
+                                <li>Barbell Bench Press - 8-10 reps</li>
+                                <li>Incline Dumbbell Press - 10 reps</li>
+                                <li>Bent-over Rows - 10 reps</li>
+                                <li>Overhead Shoulder Press - 10 reps</li>
+                                <li>EZ Bar Curls - 12 reps</li>
+                                <li>Tricep Pushdowns - 12 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Chest and shoulder static stretching (5 min)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Tuesday:</strong> Lower Body Power
+                    <ul>
+                        <li>Warm-Up: Leg swings, dynamic squats (5 min), light cycling (5 min)</li>
+                        <li>Workout (4 sets each):
+                            <ul>
+                                <li>Back Squats - 6-8 reps</li>
+                                <li>Romanian Deadlifts - 8 reps</li>
+                                <li>Leg Press - 12 reps</li>
+                                <li>Walking Lunges - 12 reps per leg</li>
+                                <li>Standing Calf Raises - 15 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Hamstring, quad, and calf stretches (5 min)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Wednesday:</strong> Rest or Active Recovery
+                    <ul>
+                        <li>Foam rolling or light stretching (20 min)</li>
+                        <li>Optional: Evening walk or yoga</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Thursday:</strong> Push (Chest/Shoulders/Triceps)
+                    <ul>
+                        <li>Warm-Up: Dynamic push-ups, arm swings (5 min)</li>
+                        <li>Workout (4 sets each):
+                            <ul>
+                                <li>Dumbbell Chest Press - 10 reps</li>
+                                <li>Arnold Press - 10 reps</li>
+                                <li>Cable Flys - 12 reps</li>
+                                <li>Lateral Raises - 15 reps</li>
+                                <li>Overhead Dumbbell Tricep Extensions - 12 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Triceps and shoulder stretches (5 min)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Friday:</strong> Pull (Back/Biceps)
+                    <ul>
+                        <li>Warm-Up: Arm circles, light rows (5 min)</li>
+                        <li>Workout (4 sets each):
+                            <ul>
+                                <li>Pull-ups or Lat Pulldown - 10 reps</li>
+                                <li>Seated Rows - 12 reps</li>
+                                <li>Face Pulls - 15 reps</li>
+                                <li>Barbell Curls - 12 reps</li>
+                                <li>Hammer Curls - 12 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Biceps and upper back stretches (5 min)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Saturday:</strong> Full-Body Conditioning
+                    <ul>
+                        <li>Warm-Up: Dynamic full-body stretches (5 min), jump rope or light jog (5 min)</li>
+                        <li>Workout (Circuit - 3 rounds):
+                            <ul>
+                                <li>Burpees - 12 reps</li>
+                                <li>Kettlebell Swings - 15 reps</li>
+                                <li>Mountain Climbers - 30 sec</li>
+                                <li>Push-ups - 12 reps</li>
+                                <li>Jump Squats - 15 reps</li>
+                            </ul>
+                        </li>
+                        <li>Cool-Down: Stretch all major muscle groups (5-10 min)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sunday:</strong> Rest and Recovery Tips
+                    <ul>
+                        <li>Focus on hydration, high-protein meals</li>
+                        <li>Optional: Light walk or meditation</li>
+                        <li>Log your progress and prepare for the week ahead</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const pdfURL = 'workoutPDF/pdf7.pdf'; // Replace with the actual path to your new PDF file
+            const element = document.createElement('a');
+            element.href = pdfURL;
+            element.download = 'BUFit-Workout-Plan.pdf';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>
