@@ -66,8 +66,8 @@ h1 {
 
 /* Layout for the container */
 .container {
-  width: 70vw; /* Increased width */
-  padding: 5rem; /* Add more padding */
+  width: 60vw; /* Increased width */
+  padding: 9rem; /* Add more padding */
   position: relative;
   border-radius: 3rem;
   background: var(--color-container);
