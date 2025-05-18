@@ -1,1 +1,1 @@
-# BUFit-Workout-Plan-Generator
+# https://jadefvillanueva.github.io/BUFit-Workout-Plan-Generator/
